@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurants | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+      <form class="search">
+        <input type="search" placeholder="Search restaurants, dishes, or cuisine" />
+        <button class="btn primary" type="button">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 0;">
+    <section class="panel" style="margin-bottom:12px;">
+      <img src="https://loremflickr.com/1400/500/food-court,restaurant?lock=201" alt="Restaurant listing banner showing multiple food counters" loading="lazy" style="border-radius:12px; border:1px solid #f0f0f0;" />
+    </section>
+
+    <section class="filters-row">
+      <span class="category">Rating 4+</span>
+      <span class="category">Fast Delivery</span>
+      <span class="category">Pure Veg</span>
+      <span class="category">Offers</span>
+      <span class="category">Cost Low to High</span>
+      <span class="category">Within 5 km</span>
+    </section>
+
+    <section class="layout-two">
+      <aside class="panel">
+        <h3>Filter by</h3>
+        <p class="meta">Cuisine</p>
+        <div class="category-row">
+          <span class="category">Italian</span>
+          <span class="category">Indian</span>
+          <span class="category">Chinese</span>
+          <span class="category">Desserts</span>
+        </div>
+        <p class="meta" style="margin-top:12px;">Delivery Time</p>
+        <div class="category-row">
+          <span class="category">Under 20 min</span>
+          <span class="category">Under 30 min</span>
+          <span class="category">Under 45 min</span>
+        </div>
+      </aside>
+
+      <section class="grid cards-3">
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/burger,restaurant?lock=211" alt="Burger Hub restaurant serving burgers" loading="lazy" />
+          <div class="card-body">
+            <h3>Burger Hub</h3>
+            <p class="meta">4.4 star | 30 mins | Rs 220 for two</p>
+            <p class="meta">Burger | Fast Food | American</p>
+            <span class="offer">25% OFF</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/biryani,restaurant?lock=212" alt="Hyderabad Kitchen restaurant serving biryani" loading="lazy" />
+          <div class="card-body">
+            <h3>Hyderabad Kitchen</h3>
+            <p class="meta">4.7 star | 24 mins | Rs 300 for two</p>
+            <p class="meta">Biryani | Kebab | Indian</p>
+            <span class="offer">Free Delivery</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/pizza,restaurant?lock=213" alt="Pizza Craft restaurant serving italian pizzas" loading="lazy" />
+          <div class="card-body">
+            <h3>Pizza Craft</h3>
+            <p class="meta">4.5 star | 32 mins | Rs 250 for two</p>
+            <p class="meta">Pizza | Italian | Continental</p>
+            <span class="offer">20% OFF</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/noodles,chinese?lock=214" alt="Wok House restaurant serving chinese noodles" loading="lazy" />
+          <div class="card-body">
+            <h3>Wok House</h3>
+            <p class="meta">4.3 star | 29 mins | Rs 240 for two</p>
+            <p class="meta">Chinese | Noodles | Asian</p>
+            <span class="offer">Buy 1 Get 1</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/cake,dessert,cafe?lock=215" alt="Sugar Spoon dessert cafe with cakes and sweets" loading="lazy" />
+          <div class="card-body">
+            <h3>Sugar Spoon</h3>
+            <p class="meta">4.6 star | 26 mins | Rs 200 for two</p>
+            <p class="meta">Desserts | Cakes | Beverages</p>
+            <span class="offer">15% OFF</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/salad,healthy-food?lock=216" alt="Green Bowl restaurant serving healthy salad bowls" loading="lazy" />
+          <div class="card-body">
+            <h3>Green Bowl</h3>
+            <p class="meta">4.5 star | 22 mins | Rs 230 for two</p>
+            <p class="meta">Healthy | Salad | Bowls</p>
+            <span class="offer">Healthy Combo</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section class="section">
+      <div class="panel" style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+        <span class="meta">Showing 6 of 26 restaurants</span>
+        <div style="display:flex; gap:8px;">
+          <button class="btn ghost" type="button">Previous</button>
+          <button class="btn ghost" type="button">1</button>
+          <button class="btn primary" type="button">2</button>
+          <button class="btn ghost" type="button">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

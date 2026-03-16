@@ -1,0 +1,17 @@
+.quick-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.quick-card {
+  border: 1px solid #f0f0f0;
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 8px 24px rgba(28, 28, 28, 0.08);
+}
+
+.quick-card h3 {
+  margin: 0 0 6px;
+}

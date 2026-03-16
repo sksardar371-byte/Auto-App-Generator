@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-layout">
+      <aside class="auth-hero">
+        <p class="auth-kicker">Get Started</p>
+        <h1>Create Your Account</h1>
+        <p>Set up your access to start using authenticated dashboard workflows.</p>
+      </aside>
+
+      <section class="auth-panel">
+        <h2>Register</h2>
+        <p class="auth-subtitle">Create your profile with role-based access.</p>
+        <form id="registerForm" class="auth-form">
+          <label>Full Name</label>
+          <input name="name" required />
+          <label>Email</label>
+          <input name="email" type="email" required />
+          <label>Password</label>
+          <input name="password" type="password" required />
+          <label>Role</label>
+          <select name="role">
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+          </select>
+          <button type="submit">Register</button>
+        </form>
+        <p class="auth-links"><a href="login.html">Already have an account?</a> <span>|</span> <a href="index.html">Back Home</a></p>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

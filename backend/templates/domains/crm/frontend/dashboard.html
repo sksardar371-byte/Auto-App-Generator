@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin:12px 0; }
+    .stat { border:1px solid #d7e0ed; border-radius:10px; padding:10px; background:#fff; }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <header class="row">
+        <h1>CRM Dashboard</h1>
+        <button id="logoutBtn" class="btn secondary" type="button">Logout</button>
+      </header>
+      <div class="stats">
+        <div class="stat"><strong>Leads</strong><div id="metricCount">0</div></div>
+        <div class="stat"><strong>Pipeline Value</strong><div id="metricValue">0</div></div>
+      </div>
+      <form id="dashboardFeatureForm">
+        <label>Lead Name</label><input name="leadName" required />
+        <label>Company</label><input name="company" />
+        <label>Deal Value</label><input name="dealValue" type="number" min="0" step="0.01" />
+        <label>Stage</label>
+        <select name="stage">
+          <option value="new">new</option>
+          <option value="qualified">qualified</option>
+          <option value="proposal">proposal</option>
+          <option value="won">won</option>
+          <option value="lost">lost</option>
+        </select>
+        <label>Notes</label><textarea name="notes"></textarea>
+        <button type="submit">Save Lead</button>
+      </form>
+      <section id="project-list"></section>
+      <p><a href="index.html">Back Home</a></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

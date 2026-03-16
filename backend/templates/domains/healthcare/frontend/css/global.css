@@ -1,0 +1,629 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap");
+
+:root {
+  --bg: #f3f6fc;
+  --surface: #ffffff;
+  --line: #d8e1ee;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #1d4ed8;
+  --primary-soft: #e0e7ff;
+  --success: #166534;
+  --danger: #b91c1c;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: radial-gradient(circle at 10% 10%, rgba(29,78,216,0.12), transparent 40%), var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn.secondary {
+  background: #fff;
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.role-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.role-sidebar {
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: #dbeafe;
+  padding: 20px 14px;
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.role-brand h2 { margin: 0; color: #fff; }
+.role-brand p { margin: 6px 0 0; color: #93c5fd; font-size: 13px; }
+
+.role-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.role-nav a {
+  display: block;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 10px;
+  padding: 9px 10px;
+  text-decoration: none;
+}
+
+.role-nav a.active {
+  background: rgba(30, 64, 175, 0.45);
+  border-color: rgba(96, 165, 250, 0.7);
+}
+
+.role-sidebar > .btn.secondary {
+  display: block;
+  text-align: center;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: transparent;
+  border-radius: 10px;
+  padding: 9px 10px;
+}
+
+.role-sidebar > .btn.secondary:hover {
+  text-decoration: none;
+  background: rgba(30, 64, 175, 0.25);
+  border-color: rgba(96, 165, 250, 0.6);
+}
+
+.role-main {
+  padding: 20px;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.role-topbar {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.role-topbar h1 { margin: 4px 0 0; font-size: 28px; }
+.role-topbar p { margin: 0; color: var(--muted); }
+
+.topbar-actions { display: flex; align-items: center; gap: 8px; }
+.topbar-actions .is-current {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1e3a8a;
+}
+.topbar-user {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 13px;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.panel h2, .panel h3 { margin-top: 0; }
+.muted { color: var(--muted); }
+
+.cards {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+}
+.card p { margin: 0 0 8px; color: var(--muted); font-size: 13px; }
+.card h3 { margin: 0; font-size: 24px; }
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.list li {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #f8fbff;
+}
+
+.table-wrap { overflow: auto; }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 8px;
+}
+.form-grid input, .form-grid select, .form-grid textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+}
+
+@media (max-width: 960px) {
+  .role-shell { grid-template-columns: 1fr; }
+}
+
+/* HMS role-dashboard override */
+:root {
+  --bg: #eef8f5;
+  --surface: #ffffff;
+  --line: #c6dfd8;
+  --text: #102437;
+  --muted: #4f6678;
+  --primary: #0f766e;
+  --primary-soft: #ccfbf1;
+  --success: #0f766e;
+  --danger: #b91c1c;
+}
+
+body {
+  font-family: "Manrope", "Segoe UI", Tahoma, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(20, 184, 166, 0.14), transparent 35%),
+    radial-gradient(circle at 90% 4%, rgba(37, 99, 235, 0.1), transparent 30%),
+    var(--bg);
+}
+
+.btn {
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), #0a8a7f);
+}
+
+.btn.secondary {
+  background: #f6fffd;
+  color: #0f3b45;
+  border-color: #b8d9d1;
+}
+
+.role-shell {
+  grid-template-columns: 280px 1fr;
+}
+
+.role-sidebar {
+  background: linear-gradient(180deg, #073042 0%, #0f766e 56%, #0d3b66 100%);
+  color: #e2f7f4;
+}
+
+.role-brand p {
+  color: #d1fae5;
+}
+
+.role-nav a {
+  color: #eff6ff;
+  border-color: rgba(153, 246, 228, 0.35);
+  border-radius: 12px;
+  background: rgba(7, 48, 66, 0.24);
+}
+
+.role-nav a.active,
+.role-nav a:hover {
+  background: rgba(37, 99, 235, 0.25);
+  border-color: rgba(125, 211, 252, 0.9);
+  text-decoration: none;
+}
+
+.role-sidebar > .btn.secondary {
+  color: #e2f7f4;
+  border-color: rgba(153, 246, 228, 0.35);
+}
+
+.role-main {
+  padding: 24px;
+  gap: 16px;
+}
+
+.role-topbar {
+  border-color: #b8d9d1;
+  box-shadow: 0 10px 22px rgba(7, 35, 48, 0.09);
+}
+
+.role-topbar p {
+  color: #0f766e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+}
+
+.topbar-user {
+  border-color: #b8d9d1;
+  background: #f6fffd;
+}
+
+.panel {
+  border-color: #c6dfd8;
+  box-shadow: 0 8px 16px rgba(7, 35, 48, 0.06);
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.card {
+  border-color: #c6dfd8;
+  border-left: 4px solid #14b8a6;
+  background: linear-gradient(180deg, #ffffff 0%, #f5fdfa 100%);
+}
+
+.card h3 {
+  color: #0f5f59;
+}
+
+.list li {
+  border-color: #c6dfd8;
+  background: #f8fffd;
+}
+
+.table th,
+.table td {
+  border-bottom-color: #d5e9e2;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  border-color: #c6dfd8;
+  background: #fbfffe;
+}
+
+/* HMS modern clinical UI refresh */
+
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --line: #e5e7eb;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-soft: #dbeafe;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --panel-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 2% 2%, rgba(37, 99, 235, 0.16), transparent 36%),
+    radial-gradient(circle at 100% 8%, rgba(34, 197, 94, 0.12), transparent 30%),
+    var(--bg);
+}
+
+.role-shell {
+  grid-template-columns: 260px 1fr;
+  gap: 14px;
+  padding: 14px;
+}
+
+.role-sidebar {
+  position: sticky;
+  top: 14px;
+  height: calc(100vh - 28px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  color: var(--text);
+  box-shadow: var(--panel-shadow);
+  padding: 18px 14px;
+}
+
+.role-brand h2 {
+  color: #1e3a8a;
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: 24px;
+}
+
+.role-brand p {
+  color: #475569;
+}
+
+.role-nav {
+  gap: 7px;
+}
+
+.role-nav a {
+  position: relative;
+  color: #1f2937;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  padding: 10px 12px 10px 38px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.role-nav a::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 6px;
+  border: 2px solid #93c5fd;
+  transform: translateY(-50%);
+  background: #eff6ff;
+}
+
+.role-nav a:hover {
+  text-decoration: none;
+  border-color: #bfdbfe;
+  background: #f1f7ff;
+  transform: translateX(2px);
+}
+
+.role-nav a.active {
+  border-color: #93c5fd;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  color: #1e3a8a;
+}
+
+.role-sidebar > .btn.secondary {
+  border-radius: 12px;
+  border-color: #bfdbfe;
+  color: #1e3a8a;
+  background: #eff6ff;
+  font-weight: 700;
+}
+
+.role-sidebar > .btn.secondary:hover {
+  background: #dbeafe;
+  text-decoration: none;
+}
+
+.role-main {
+  padding: 0;
+  gap: 14px;
+}
+
+.role-topbar {
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--panel-shadow);
+}
+
+.role-topbar h1 {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: clamp(26px, 3vw, 34px);
+  color: #0f172a;
+}
+
+.role-topbar p {
+  color: #2563eb;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+.topbar-user {
+  border-color: #bfdbfe;
+  background: #f8fbff;
+  color: #1e3a8a;
+}
+
+.panel {
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: var(--panel-shadow);
+}
+
+.cards {
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid #dbe5f4;
+  border-radius: 16px;
+  background: linear-gradient(165deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: -24px;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18), transparent 70%);
+}
+
+.card p {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.card h3 {
+  color: #1e3a8a;
+  font-family: "Manrope", "Inter", sans-serif;
+}
+
+.list li {
+  border: 1px solid #dbe5f4;
+  border-left: 4px solid #93c5fd;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.list li:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  border-radius: 10px;
+  border-color: #d1d9e6;
+  background: #ffffff;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  outline: none;
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+@media (max-width: 960px) {
+  .role-shell {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .role-sidebar {
+    position: static;
+    height: auto;
+  }
+}
+
+/* HMS style variant B */
+:root {
+  --bg: #f4f8fb;
+  --surface: #ffffff;
+  --line: #d9e4ec;
+  --text: #0b1f33;
+  --muted: #526579;
+  --primary: #0e7490;
+  --primary-soft: #cffafe;
+  --success: #16a34a;
+  --danger: #dc2626;
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(14, 116, 144, 0.22), transparent 30%),
+    radial-gradient(circle at 100% 12%, rgba(15, 23, 42, 0.1), transparent 32%),
+    #f4f8fb;
+}
+
+.role-shell {
+  gap: 16px;
+}
+
+.role-sidebar {
+  border: 0;
+  background: linear-gradient(185deg, #0b1f33 0%, #0f3a5c 52%, #0e7490 100%);
+  color: #e6f4ff;
+}
+
+.role-brand h2,
+.role-brand p {
+  color: #e6f4ff;
+}
+
+.role-nav a {
+  color: #dbeafe;
+  border-color: rgba(148, 163, 184, 0.34);
+  background: rgba(15, 23, 42, 0.25);
+}
+
+.role-nav a::before {
+  border-color: #67e8f9;
+  background: rgba(103, 232, 249, 0.2);
+}
+
+.role-nav a:hover,
+.role-nav a.active {
+  color: #ffffff;
+  border-color: rgba(103, 232, 249, 0.8);
+  background: rgba(14, 116, 144, 0.35);
+}
+
+.role-sidebar > .btn.secondary {
+  color: #ecfeff;
+  border-color: rgba(103, 232, 249, 0.5);
+  background: rgba(14, 116, 144, 0.32);
+}
+
+.role-topbar {
+  border-color: #cfdbe7;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.role-topbar p {
+  color: #0e7490;
+}
+
+.topbar-user {
+  background: #f0f9ff;
+  color: #0b3a52;
+  border-color: #bae6fd;
+}
+
+.card {
+  border-color: #d5e3ee;
+  background: linear-gradient(180deg, #ffffff 0%, #f3faff 100%);
+}
+
+.card::after {
+  background: radial-gradient(circle, rgba(14, 116, 144, 0.2), transparent 70%);
+}
+
+.card h3 {
+  color: #0b3a52;
+}
+
+.list li {
+  border-left-color: #06b6d4;
+}

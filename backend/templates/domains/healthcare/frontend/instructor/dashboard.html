@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="dashboard">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>HMS Doctor</h2><p>Clinical operations</p></div>
+      <nav class="role-nav">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="manage-courses.html">Today's Appointments</a>
+        <a href="students.html">Patient List</a>
+        <a href="create-course.html">Prescriptions</a>
+        <a href="earnings.html">Lab Requests</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Doctor Portal</p><h1>Dashboard</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="cards">
+        <article class="card"><p>Today's Consultations</p><h3 id="metricCourses">0</h3></article>
+        <article class="card"><p>Total Patients</p><h3 id="metricStudents">0</h3></article>
+        <article class="card"><p>Consultation Revenue</p><h3 id="metricRevenue">$0</h3></article>
+        <article class="card"><p>Average Rating</p><h3 id="metricRating">0.0</h3></article>
+      </section>
+      <section class="panel"><h2>Today's Appointment Queue</h2><ul id="recentCourses" class="list"></ul></section>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/instructor.js"></script>
+</body>
+</html>

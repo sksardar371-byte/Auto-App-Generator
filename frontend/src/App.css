@@ -1,0 +1,660 @@
+/* =========================
+   Reset and Body
+========================= */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background: #01021A; /* Deep dark blue base */
+  color: white;
+}
+
+/* =========================
+   Landing Page
+========================= */
+.landing {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #01021A, #000933, #00114D, #001966, #002280);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle at center, rgba(0, 180, 255, 0.05) 0%, transparent 70%);
+  z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(0,255,245,0.3);
+  box-shadow: 0 0 15px rgba(0,255,245,0.3);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00fff5;
+  text-shadow: 0 0 20px #00fff5, 0 0 40px #14ffec;
+}
+
+/* Navbar Buttons */
+.nav-buttons button {
+  margin-left: 1rem;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-buttons .signin {
+  background: rgba(255,255,255,0.05);
+  color: #00fff5;
+  box-shadow: 0 0 10px rgba(0,255,245,0.3);
+}
+
+.nav-buttons .signin:hover {
+  background: #00fff5;
+  color: #01021A;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00fff5, 0 0 25px #14ffec;
+}
+
+.nav-buttons .signup {
+  background: linear-gradient(90deg, #00fff5, #0090ff, #001966);
+  color: #01021A;
+  box-shadow: 0 0 15px #00fff5, 0 0 25px #0090ff;
+}
+
+.nav-buttons .signup:hover {
+  background-position: right;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00fff5, 0 0 50px #0090ff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+  gap: 1.5rem;
+  z-index: 10;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #00c8ff, #0090ff, #001966);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.hero .cta {
+  align-self: center;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #00c8ff, #0090ff, #001966);
+  color: #01021A;
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00c8ff, 0 0 25px #0090ff;
+  transition: all 0.3s ease;
+}
+
+.hero .cta:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00c8ff, 0 0 50px #0090ff;
+}
+
+/* =========================
+   SignUp & SignIn Pages
+========================= */
+.signup-page, .signin-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #01021A, #000933, #00114D, #001966, #002280);
+}
+
+.signup-container, .signin-container {
+  background: rgba(0,0,0,0.75);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #00fff5, 0 0 50px #0090ff;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+}
+
+.signup-title, .signin-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #00fff5, #0090ff, #001966);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Form Inputs */
+.signup-form input, .signin-form input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.signup-form input::placeholder, .signin-form input::placeholder {
+  color: #ccc;
+}
+
+.signup-form .cta, .signin-form .cta {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 18px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00fff5, #0090ff, #001966);
+  color: #01021A;
+  box-shadow: 0 0 25px #00fff5, 0 0 40px #0090ff;
+  transition: all 0.3s ease;
+}
+
+.signup-form .cta:hover, .signin-form .cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #00fff5, 0 0 80px #0090ff;
+}
+
+.signup-link, .signin-link {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.signup-link span, .signin-link span {
+  color: #00fff5;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* =========================
+   Dashboard Styles
+========================= */
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #001F3F, #002966, #003366);
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 0 25px #001F3F, 0 0 50px #003366;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 15px #001F3F, 0 0 25px #003366;
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  background: rgba(0, 255, 245, 0.1);
+  color: #00ffff;
+  transform: translateX(5px);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.sidebar ul li.active {
+  background: rgba(0, 255, 245, 0.2);
+  color: #00ffff;
+  font-weight: 600;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.workspace {
+  flex: 1;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.topbar .welcome {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.topbar .profile {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.workspace-content {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.create-project-card, .recent-projects-card {
+  background: rgba(0,0,0,0.7);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #001F3F, 0 0 40px #003366;
+  margin-bottom: 2rem;
+}
+
+.create-form textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: none;
+  resize: none;
+}
+
+.create-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.create-form select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: none;
+}
+
+.create-form select option {
+  background: #111;
+  color: #fff;
+}
+
+.generate-btn {
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(90deg, #001F3F, #003366, #004080);
+  color: #fff;
+  box-shadow: 0 0 20px #001F3F, 0 0 40px #003366, 0 0 60px #004080;
+  transition: all 0.3s ease;
+}
+
+.generate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px #001F3F, 0 0 70px #003366, 0 0 100px #004080;
+}
+
+/* Setting Inputs */
+.setting-item {
+  margin-bottom: 1.5rem;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.setting-item input, .setting-item select {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+/* Pre tag for generated code display */
+pre {
+  background: #0a0a0a;
+  padding: 12px;
+  border-radius: 12px;
+  color: #0ff;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+  max-height: 400px;
+}
+
+/* Loader for AI generation */
+.loader {
+  border: 4px solid rgba(255,255,255,0.1);
+  border-top: 4px solid #00fff5;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 1rem auto;
+}
+
+.live-generation-box {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 255, 245, 0.35);
+  border-radius: 10px;
+  background: rgba(0, 18, 35, 0.55);
+}
+
+.live-generation-title {
+  margin: 0 0 6px;
+  color: #9feeff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.live-generation-meta {
+  margin: 2px 0;
+  color: #d7f9ff;
+  font-size: 0.88rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Download Button */
+.download-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00fff5, #0090ff);
+  color: #01021A;
+  box-shadow: 0 0 15px #00fff5, 0 0 25px #0090ff;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px #00fff5, 0 0 50px #0090ff;
+}
+
+.download-btn:disabled {
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.download-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Preview Iframe */
+.iframe-container {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 500px;
+  margin-top: 20px;
+  border: 1px solid rgba(0,255,245,0.2);
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #111;
+}
+
+/* Edit chatbox for generated project changes */
+.edit-chatbox {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 245, 0.2);
+  background: rgba(8, 18, 35, 0.7);
+}
+
+.edit-chatbox h4 {
+  margin: 0 0 10px;
+  color: #9feeff;
+}
+
+.chat-history {
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+}
+
+.chat-message {
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  line-height: 1.4;
+  font-size: 0.92rem;
+}
+
+.chat-message.user {
+  background: rgba(0, 144, 255, 0.2);
+  border: 1px solid rgba(0, 144, 255, 0.35);
+}
+
+.chat-message.assistant {
+  background: rgba(0, 255, 245, 0.12);
+  border: 1px solid rgba(0, 255, 245, 0.25);
+}
+
+.chat-empty {
+  margin: 0;
+  color: #9ab6c9;
+}
+
+.chat-input-row {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-input-row textarea {
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.chat-input-row textarea:disabled {
+  opacity: 0.65;
+}
+
+.chat-input-row button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* File creation plan checklist */
+.file-plan-box {
+  margin-top: 16px;
+  border: 1px solid rgba(0, 255, 245, 0.2);
+  border-radius: 12px;
+  background: rgba(6, 22, 40, 0.6);
+  padding: 12px;
+}
+
+.file-plan-single-box {
+  margin: 0;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  color: #d7f9ff;
+  white-space: pre-wrap;
+  max-height: 280px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.file-plan-summary {
+  margin: 0 0 10px;
+  color: #d7f9ff;
+  font-size: 0.9rem;
+}
+
+.file-plan-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.file-plan-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  font-size: 0.88rem;
+}
+
+.file-plan-list li.created {
+  background: rgba(40, 167, 69, 0.18);
+  border: 1px solid rgba(40, 167, 69, 0.35);
+}
+
+.file-plan-list li.pending {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.file-plan-list li.generating {
+  background: rgba(0, 144, 255, 0.2);
+  border: 1px solid rgba(0, 144, 255, 0.45);
+  animation: livePulse 1.3s ease-in-out infinite;
+}
+
+.file-plan-list .status-mark {
+  min-width: 16px;
+  font-weight: 700;
+}
+
+.file-plan-list .step {
+  color: #b3d7e8;
+  min-width: 22px;
+}
+
+.file-plan-next,
+.file-plan-done {
+  margin: 10px 0 0;
+  font-size: 0.88rem;
+}
+
+.file-plan-next {
+  color: #ffd173;
+}
+
+.file-plan-done {
+  color: #8fffb3;
+}
+
+@keyframes livePulse {
+  0% { box-shadow: 0 0 0 rgba(0, 144, 255, 0.2); }
+  50% { box-shadow: 0 0 10px rgba(0, 144, 255, 0.35); }
+  100% { box-shadow: 0 0 0 rgba(0, 144, 255, 0.2); }
+}
+
+/* Show only one consolidated plan box */
+.file-plan-summary,
+.file-plan-list,
+.file-plan-next,
+.file-plan-done {
+  display: none;
+}

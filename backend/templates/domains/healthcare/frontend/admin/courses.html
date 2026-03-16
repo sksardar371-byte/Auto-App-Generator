@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appointment Approval</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="courses">
+  <main class="role-shell">
+    <aside class="role-sidebar"><div class="role-brand"><h2>HMS Admin</h2><p>Hospital control</p></div><nav class="role-nav"><a href="dashboard.html">Dashboard</a><a href="users.html">Staff</a><a class="active" href="courses.html">Appointments</a><a href="categories.html">Departments</a><a href="revenue.html">Pharmacy & Billing</a><a href="reports.html">Lab Reports</a><a href="settings.html">Settings</a></nav></aside>
+    <section class="role-main">
+      <header class="role-topbar"><div><p>Admin Portal</p><h1>Appointments</h1></div><div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><button id="logoutBtn" class="btn secondary">Logout</button></div></header>
+      <section class="panel table-wrap"><table class="table"><thead><tr><th>Appointment</th><th>Status</th><th>Approval</th></tr></thead><tbody id="coursesTableBody"></tbody></table></section>
+    </section>
+  </main>
+  <script src="../script.js"></script><script src="../js/api.js"></script><script src="../js/auth.js"></script><script src="../js/admin.js"></script>
+</body>
+</html>

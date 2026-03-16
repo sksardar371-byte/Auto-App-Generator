@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructor Dashboard</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="dashboard">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>LMS Instructor</h2><p>Course operations</p></div>
+      <nav class="role-nav">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="create-course.html">Create Course</a>
+        <a href="manage-courses.html">Manage Courses</a>
+        <a href="students.html">Students</a>
+        <a href="earnings.html">Earnings</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Instructor Portal</p><h1>Dashboard</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="cards">
+        <article class="card"><p>Total Courses</p><h3 id="metricCourses">0</h3></article>
+        <article class="card"><p>Total Students</p><h3 id="metricStudents">0</h3></article>
+        <article class="card"><p>Total Revenue</p><h3 id="metricRevenue">$0</h3></article>
+        <article class="card"><p>Average Rating</p><h3 id="metricRating">0.0</h3></article>
+      </section>
+      <section class="panel"><h2>Recent Courses</h2><ul id="recentCourses" class="list"></ul></section>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/instructor.js"></script>
+</body>
+</html>

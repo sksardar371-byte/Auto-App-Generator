@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+      <span class="chip" id="userName">User</span>
+      <span class="chip" id="roleBadge">customer</span>
+      <a class="btn ghost" id="roleHomeLink" href="profile.html">Role Home</a>
+      <button class="btn primary" id="logoutBtn" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 0;">
+    <section class="kpis">
+      <article class="kpi"><span>Live Restaurants</span><strong>320</strong></article>
+      <article class="kpi"><span>Orders Today</span><strong>1,482</strong></article>
+      <article class="kpi"><span>Avg Delivery</span><strong>29 min</strong></article>
+    </section>
+    <section class="section">
+      <div class="panel">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80" alt="Food dashboard banner" style="width:100%; border-radius:12px; border:1px solid #f0f0f0;" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quick Access</h2>
+      <div class="quick-grid">
+        <a class="quick-card" href="restaurants.html"><h3>Restaurants</h3><p class="meta">Explore top-rated restaurants with offers.</p></a>
+        <a class="quick-card" href="restaurants.html"><h3>Top Picks</h3><p class="meta">Browse popular dishes from restaurants.</p></a>
+        <a class="quick-card" href="cart.html"><h3>Cart</h3><p class="meta">Review items, quantity, and delivery fee.</p></a>
+        <a class="quick-card" href="checkout.html"><h3>Checkout</h3><p class="meta">Confirm address and payment method.</p></a>
+        <a class="quick-card" href="order-tracking.html"><h3>Order Tracking</h3><p class="meta">Track order status from kitchen to door.</p></a>
+        <a class="quick-card" href="profile.html"><h3>Profile</h3><p class="meta">My orders, addresses, reviews, favorites.</p></a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "watch": [
+    "server.js",
+    "routes",
+    "controllers",
+    "middleware",
+    "models",
+    "db.js"
+  ],
+  "ext": "js,json",
+  "ignore": [
+    "node_modules/**",
+    "ai_generated/**",
+    "generated_projects/**",
+    "generated_apps/**",
+    "preview_projects/**",
+    "uploads/**",
+    "downloads/**",
+    "public/**",
+    "venv/**",
+    "*.zip",
+    "*.exe"
+  ]
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Course</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="create-course">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>LMS Instructor</h2><p>Course operations</p></div>
+      <nav class="role-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="create-course.html">Create Course</a>
+        <a href="manage-courses.html">Manage Courses</a>
+        <a href="students.html">Students</a>
+        <a href="earnings.html">Earnings</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Instructor Portal</p><h1>Create Course</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="panel">
+        <h2>Course Builder</h2>
+        <form id="createCourseForm" class="form-grid">
+          <label>Course Title</label><input name="courseTitle" placeholder="Course title" required />
+          <label>Description</label><textarea name="description" placeholder="Describe your course" required></textarea>
+          <label>Category</label><input name="category" placeholder="Web Development" value="Web Development" />
+          <label>Thumbnail URL</label><input name="thumbnailUrl" placeholder="https://..." />
+          <label>Price (USD)</label><input name="price" type="number" min="0" value="49" />
+          <label>Duration (weeks)</label><input name="durationWeeks" type="number" min="1" value="8" />
+          <label>Level</label><select name="level"><option>Beginner</option><option selected>Intermediate</option><option>Advanced</option></select>
+          <label>Status</label><select name="status"><option value="active" selected>active</option><option value="draft">draft</option></select>
+          <label>Upload Video URL</label><input name="videoUrl" placeholder="https://..." />
+          <label>Post Notes</label><textarea name="notes" placeholder="Add module notes / learning outcomes"></textarea>
+          <label>Quiz Question</label><textarea name="quizQuestion" placeholder="Enter quiz question"></textarea>
+          <button id="saveCourseBtn" type="submit" class="btn">Save Course</button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/instructor.js"></script>
+</body>
+</html>

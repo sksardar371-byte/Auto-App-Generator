@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 0; max-width:960px;">
+    <section class="panel" style="margin-bottom:12px;">
+      <img src="https://loremflickr.com/1400/700/payment,food-delivery?lock=501" alt="Checkout payment and delivery flow" loading="lazy" style="border-radius:12px; border:1px solid #f0f0f0;" />
+    </section>
+
+    <section class="layout-two">
+      <section class="panel">
+        <h2 style="margin-top:0;">Delivery Address</h2>
+        <p class="meta">Home</p>
+        <p class="meta">Road No. 12, Banjara Hills, Hyderabad</p>
+
+        <h2 style="margin-top:14px;">Payment Method</h2>
+        <label><input type="radio" name="payment" value="UPI" checked /> UPI</label><br />
+        <label><input type="radio" name="payment" value="Card" /> Card</label><br />
+        <label><input type="radio" name="payment" value="Cash on Delivery" /> Cash on Delivery</label>
+      </section>
+
+      <aside class="panel">
+        <h2 style="margin-top:0;">Order Summary</h2>
+        <div id="checkoutItems"></div>
+        <p class="meta">Items Total: <strong id="checkoutItemsTotal">Rs 0</strong></p>
+        <p class="meta">Delivery Fee: <strong id="checkoutDeliveryFee">Rs 0</strong></p>
+        <h3>Total: <span id="checkoutGrandTotal">Rs 0</span></h3>
+        <button class="btn primary" id="placeOrderBtn" type="button">Place Order</button>
+      </aside>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

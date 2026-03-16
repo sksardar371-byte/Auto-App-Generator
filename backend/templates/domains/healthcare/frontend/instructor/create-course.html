@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prescriptions</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="create-course">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>HMS Doctor</h2><p>Clinical operations</p></div>
+      <nav class="role-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="manage-courses.html">Today's Appointments</a>
+        <a href="students.html">Patient List</a>
+        <a class="active" href="create-course.html">Prescriptions</a>
+        <a href="earnings.html">Lab Requests</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Doctor Portal</p><h1>Prescriptions</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="panel">
+        <h2>Prescription & Treatment Plan</h2>
+        <form id="createCourseForm" class="form-grid">
+          <label>Consultation Title</label><input name="courseTitle" placeholder="Consultation title" required />
+          <label>Description</label><textarea name="description" placeholder="Describe consultation scope" required></textarea>
+          <label>Department</label><input name="category" placeholder="Cardiology" value="Cardiology" />
+          <label>Reference Image URL</label><input name="thumbnailUrl" placeholder="https://..." />
+          <label>Consultation Fee (USD)</label><input name="price" type="number" min="0" value="49" />
+          <label>Duration (30 min blocks)</label><input name="durationWeeks" type="number" min="1" value="1" />
+          <label>Priority</label><select name="level"><option>Routine</option><option selected>Standard</option><option>Priority</option></select>
+          <label>Status</label><select name="status"><option value="active" selected>active</option><option value="draft">draft</option></select>
+          <label>Upload Consultation Video URL</label><input name="videoUrl" placeholder="https://..." />
+          <label>Post Clinical Notes</label><textarea name="notes" placeholder="Add diagnosis notes / treatment plan"></textarea>
+          <label>Patient Checklist Question</label><textarea name="quizQuestion" placeholder="Enter pre-consultation question"></textarea>
+          <button id="saveCourseBtn" type="submit" class="btn">Save Prescription Plan</button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/instructor.js"></script>
+</body>
+</html>
+

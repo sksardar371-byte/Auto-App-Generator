@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Catalog</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body>
+  <main class="role-main" style="max-width:1100px;margin:0 auto;">
+    <header class="role-topbar">
+      <div><p>Public</p><h1>Course Catalog</h1></div>
+      <div class="topbar-actions"><a class="btn secondary" href="../student/dashboard.html">Dashboard</a></div>
+    </header>
+    <section class="panel">
+      <h2>Featured Courses</h2>
+      <div class="page-grid">
+        <article class="course-item"><h3>Full Stack Web Development Bootcamp</h3><p class="muted">Web Development | Intermediate</p><a class="btn secondary" href="course-details.html?course=Full%20Stack%20Web%20Development%20Bootcamp&category=Web%20Development&level=Intermediate&instructor=Aisha%20Thomas&duration=12%20weeks&price=%2479">View Details</a></article>
+        <article class="course-item"><h3>Data Analytics with Python</h3><p class="muted">Data Science | Beginner</p><a class="btn secondary" href="course-details.html?course=Data%20Analytics%20with%20Python&category=Data%20Science&level=Beginner&instructor=Ravi%20Menon&duration=8%20weeks&price=%2459">View Details</a></article>
+        <article class="course-item"><h3>Cloud Engineering on AWS</h3><p class="muted">Cloud Computing | Advanced</p><a class="btn secondary" href="course-details.html?course=Cloud%20Engineering%20on%20AWS&category=Cloud%20Computing&level=Advanced&instructor=Nora%20Blake&duration=10%20weeks&price=%2499">View Details</a></article>
+      </div>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

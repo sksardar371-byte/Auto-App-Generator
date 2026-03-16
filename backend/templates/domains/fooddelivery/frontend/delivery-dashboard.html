@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delivery Dashboard | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush Delivery</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 0;">
+    <section class="kpis">
+      <article class="kpi"><span>Assigned Orders</span><strong id="deliveryAssignedCount">0</strong></article>
+      <article class="kpi"><span>In Transit</span><strong id="deliveryInTransitCount">0</strong></article>
+      <article class="kpi"><span>Delivered</span><strong id="deliveryDeliveredCount">0</strong></article>
+      <article class="kpi"><span>Average ETA</span><strong id="deliveryAvgEta">0 min</strong></article>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <img src="https://loremflickr.com/1400/700/delivery,bike,food?lock=821" alt="Delivery partner with food order on bike" loading="lazy" style="border-radius:12px; border:1px solid #f0f0f0;" />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 style="margin-top:0;">Assigned Orders</h2>
+        <p class="meta">Update order status and it will reflect in customer tracking.</p>
+        <div id="deliveryOrdersList" class="list-stack"></div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.notice {
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  top: 16px;
+  right: auto;
+  bottom: auto;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  opacity: 0;
+  transform: translate(-50%, -8px);
+  pointer-events: none;
+  transition: all .2s ease;
+}
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* HMS UI feedback styling */
+.notice {
+  border-color: #99f6e4;
+  background: #ecfeff;
+  color: #0f766e;
+}
+
+.toast {
+  background: #083344;
+  border: 1px solid rgba(153, 246, 228, 0.35);
+  box-shadow: 0 10px 22px rgba(8, 51, 68, 0.24);
+}
+
+/* HMS modern feedback components */
+.notice {
+  border-radius: 12px;
+  border-color: #bfdbfe;
+  background: linear-gradient(135deg, #eff6ff, #f8fbff);
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.toast {
+  border-radius: 12px;
+  border: 1px solid rgba(191, 219, 254, 0.7);
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.28);
+  backdrop-filter: blur(6px);
+}
+
+/* HMS components style variant B */
+.notice {
+  border-color: #7dd3fc;
+  background: linear-gradient(135deg, #ecfeff, #f0f9ff);
+  color: #0e7490;
+}
+
+.toast {
+  border-color: rgba(103, 232, 249, 0.55);
+  background: rgba(8, 31, 51, 0.94);
+  box-shadow: 0 14px 26px rgba(8, 31, 51, 0.32);
+}

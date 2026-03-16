@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:20px 0 28px;">
+    <section class="auth-layout">
+      <article class="auth-showcase">
+        <h2>Create Your FoodRush Account</h2>
+        <p class="meta">Register once and manage orders, addresses, favorites, and delivery workflow access.</p>
+        <img src="https://loremflickr.com/1200/800/restaurant,delivery?lock=902" alt="Food delivery registration showcase" loading="lazy" />
+        <ul class="auth-points">
+          <li>Customer, restaurant owner, delivery partner, and admin roles</li>
+          <li>Persistent cart, checkout, and tracking history</li>
+          <li>Professional interface across all modules</li>
+        </ul>
+      </article>
+
+      <article class="auth-form">
+        <h1>Register</h1>
+        <p class="meta">Fill details to create your account.</p>
+        <form id="registerForm" style="display:grid; gap:10px;">
+          <label>Full Name</label>
+          <input type="text" name="name" required />
+          <label>Email</label>
+          <input type="email" name="email" required />
+          <label>Phone</label>
+          <input type="text" name="phone" />
+          <label>Password</label>
+          <input type="password" name="password" required />
+          <label>Role</label>
+          <select name="role">
+            <option value="customer">customer</option>
+            <option value="restaurant_owner">restaurant_owner</option>
+            <option value="delivery_partner">delivery_partner</option>
+            <option value="admin">admin</option>
+          </select>
+          <button class="btn primary" type="submit">Create Account</button>
+        </form>
+        <p class="meta" style="margin-top:12px;">Already have an account? <a href="login.html" style="color:var(--brand);">Sign in</a></p>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin:12px 0; }
+    .stat { border:1px solid #d7e0ed; border-radius:10px; padding:10px; background:#fff; }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <header class="row">
+        <h1>Fitness Dashboard</h1>
+        <div class="actions">
+          <a class="btn secondary" href="exercises.html">Exercises</a>
+          <a class="btn secondary" href="workouts.html">Workouts</a>
+          <a class="btn secondary" href="progress.html">Progress</a>
+          <button id="logoutBtn" class="btn secondary" type="button">Logout</button>
+        </div>
+      </header>
+      <div class="stats">
+        <div class="stat"><strong>Total Workouts</strong><div id="metricCount">0</div></div>
+        <div class="stat"><strong>Latest Workout</strong><div id="metricLatest">-</div></div>
+        <div class="stat"><strong>Latest Weight</strong><div id="metricWeight">-</div></div>
+      </div>
+      <p>Use the feature pages to manage exercises, workouts, and body progress. Summary here updates from live API data.</p>
+      <section id="project-list"></section>
+      <p><a href="index.html">Back Home</a></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

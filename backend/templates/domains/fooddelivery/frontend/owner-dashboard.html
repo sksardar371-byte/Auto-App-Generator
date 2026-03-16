@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Owner Dashboard | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush Owner</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 0;">
+    <section class="kpis">
+      <article class="kpi"><span>Menu Items</span><strong id="ownerMenuCount">0</strong></article>
+      <article class="kpi"><span>Average Price</span><strong id="ownerAvgPrice">Rs 0</strong></article>
+      <article class="kpi"><span>Published Today</span><strong id="ownerPublishedToday">0</strong></article>
+      <article class="kpi"><span>Last Updated</span><strong id="ownerLastUpdated">-</strong></article>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <img src="https://loremflickr.com/1400/700/kitchen,restaurant-owner?lock=811" alt="Restaurant owner kitchen and menu operations" loading="lazy" style="border-radius:12px; border:1px solid #f0f0f0;" />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 style="margin-top:0;">Add Food Item</h2>
+        <p class="meta" id="ownerRoleNote">Add menu item details with image URL.</p>
+        <form id="ownerMenuForm" class="form-grid">
+          <div>
+            <label>Item Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label>Price (Rs)</label>
+            <input type="number" name="price" min="1" required />
+          </div>
+          <div>
+            <label>Category</label>
+            <input type="text" name="category" placeholder="Biryani / Dessert / Drinks" />
+          </div>
+          <div>
+            <label>Image URL</label>
+            <input type="url" name="image" placeholder="https://..." required />
+          </div>
+          <div class="full">
+            <label>Description</label>
+            <textarea name="description" rows="3" placeholder="Describe the dish, flavor, and ingredients"></textarea>
+          </div>
+          <div class="full action-row">
+            <button class="btn primary" type="submit">Add Item</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 style="margin-top:0;">Your Menu Items</h2>
+        <div id="ownerMenuList" class="list-stack"></div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

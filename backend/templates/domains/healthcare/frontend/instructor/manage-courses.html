@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Appointments</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="manage-courses">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>HMS Doctor</h2><p>Clinical operations</p></div>
+      <nav class="role-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="manage-courses.html">Today's Appointments</a>
+        <a href="students.html">Patient List</a>
+        <a href="create-course.html">Prescriptions</a>
+        <a href="earnings.html">Lab Requests</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Doctor Portal</p><h1>Today's Appointments</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="panel table-wrap">
+        <table class="table">
+          <thead><tr><th>Consultation</th><th>Status</th><th>Priority</th><th>Actions</th></tr></thead>
+          <tbody id="coursesTableBody"></tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/instructor.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediFlow HMS | Operations Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <main class="lms-shell">
+    <aside class="lms-sidebar">
+      <div>
+        <p class="lms-sidebar-kicker">Hospital Suite</p>
+        <h2>HMS Control</h2>
+        <p class="lms-sidebar-text">Manage real hospital operations from booking to clinical reporting.</p>
+      </div>
+      <nav class="lms-sidebar-nav" aria-label="HMS sections">
+        <button type="button" class="active" data-nav-target="viewDashboard">Dashboard</button>
+        <button type="button" data-nav-target="viewCourseCatalog">Doctor Directory</button>
+        <button type="button" data-nav-target="viewMyCourses">Booked Appointments</button>
+        <button type="button" data-nav-target="viewClassroom">Consultation Room</button>
+        <button type="button" data-nav-target="viewUpcomingSessions">Appointment Calendar</button>
+        <button type="button" data-nav-target="viewLearningActivity">Health Activity</button>
+        <button type="button" data-nav-target="viewCourseRecords">Clinical Records</button>
+      </nav>
+      <a class="btn secondary lms-home-link" href="index.html">Back Home</a>
+    </aside>
+
+    <section class="lms-main">
+      <header class="lms-topbar">
+        <div>
+          <p class="lms-kicker">Professional Hospital Management</p>
+          <h1>Hospital Management Command Center</h1>
+          <p id="roleAccessNote" class="lms-role-note"></p>
+        </div>
+        <div class="lms-top-actions">
+          <button id="refreshBtn" class="btn secondary" type="button">Refresh</button>
+          <button id="logoutBtn" class="btn secondary" type="button">Logout</button>
+        </div>
+      </header>
+      <div id="enrollmentMessage" class="enrollment-message" aria-live="polite"></div>
+
+      <section id="viewDashboard" class="lms-metrics lms-view-section" data-view-group="viewDashboard">
+        <article class="metric-card">
+          <p>Total Consultations</p>
+          <h3 id="metricCourses">0</h3>
+        </article>
+        <article class="metric-card">
+          <p>Active Appointments</p>
+          <h3 id="metricActive">0</h3>
+        </article>
+        <article class="metric-card">
+          <p>Completed Visits</p>
+          <h3 id="metricCompleted">0</h3>
+        </article>
+        <article class="metric-card">
+          <p>Average Care Score</p>
+          <h3 id="metricRating">0.0</h3>
+        </article>
+      </section>
+
+      <section id="viewCourseCatalog" class="lms-grid lms-view-section" data-view-group="viewCourseCatalog">
+        <article id="courseCreatePanel" class="lms-panel lms-form-panel">
+          <header class="lms-panel-header">
+            <h2>Create Appointment Slot</h2>
+            <span class="badge">Admin</span>
+          </header>
+          <form id="dashboardFeatureForm" class="lms-form">
+            <label>Appointment Title</label>
+            <input name="courseTitle" required />
+            <label>Doctor</label>
+            <input name="instructor" required />
+            <label>Department</label>
+            <select name="category">
+              <option value="Cardiology">Cardiology</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Orthopedics">Orthopedics</option>
+              <option value="Pediatrics">Pediatrics</option>
+              <option value="Dermatology">Dermatology</option>
+            </select>
+            <label>Priority</label>
+            <select name="level">
+              <option value="Routine">Routine</option>
+              <option value="Standard">Standard</option>
+              <option value="Priority">Priority</option>
+            </select>
+            <label>Status</label>
+            <select name="status">
+              <option value="active">active</option>
+              <option value="completed">completed</option>
+              <option value="draft">draft</option>
+            </select>
+            <label>Duration (minutes)</label>
+            <input name="durationWeeks" type="number" min="1" max="240" value="30" />
+            <label>Care Quality Score (1 to 5)</label>
+            <input name="rating" type="number" min="1" max="5" step="0.1" value="4.6" />
+            <label>Expected Patients / Day</label>
+            <input name="learners" type="number" min="1" value="120" />
+            <label>Consultation Fee (USD)</label>
+            <input name="price" type="number" min="0" value="49" />
+            <label>Upload Consultation Video URL</label>
+            <input name="videoUrl" type="url" placeholder="https://example.com/intro-video" />
+            <label>Post Clinical Notes</label>
+            <textarea name="postNotes" placeholder="Add diagnosis notes, summary, or references..."></textarea>
+            <button type="submit">Save Appointment Slot</button>
+          </form>
+        </article>
+
+        <article class="lms-panel">
+          <header class="lms-panel-header">
+            <h2>Doctor Directory</h2>
+            <span class="badge secondary" id="catalogSourceTag">Sample Data</span>
+          </header>
+          <div class="catalog-controls">
+            <input id="catalogSearch" type="search" placeholder="Search by doctor, department, or appointment type..." />
+            <select id="catalogCategory">
+              <option value="all">All Departments</option>
+            </select>
+          </div>
+          <div id="courseCatalog" class="lms-course-grid"></div>
+        </article>
+      </section>
+
+      <section id="viewMyCourses" class="lms-panel lms-view-section" data-view-group="viewMyCourses">
+        <header class="lms-panel-header">
+          <h2>My Appointments</h2>
+          <span class="badge secondary" id="myCourseCount">0 Booked</span>
+        </header>
+        <section id="myCoursesList" class="my-courses-grid"></section>
+      </section>
+
+      <section id="viewClassroom" class="lms-panel classroom-panel lms-view-section" data-view-group="viewClassroom">
+        <header class="lms-panel-header">
+          <h2>Consultation Room</h2>
+          <span class="badge secondary" id="classroomModeTag">Select Appointment</span>
+        </header>
+        <div id="classroomEmpty" class="classroom-empty">
+          Open an appointment from <strong>My Appointments</strong> to continue consultation workflow.
+        </div>
+        <div id="classroomContent" class="classroom-content" hidden>
+          <h3 id="classroomCourseTitle"></h3>
+          <p id="classroomCourseMeta" class="course-meta"></p>
+          <div class="classroom-progress-track">
+            <div id="classroomProgressFill" class="classroom-progress-fill"></div>
+          </div>
+          <p id="classroomProgressText" class="course-meta"></p>
+
+          <section class="classroom-section">
+            <h4>Visit Checklist</h4>
+            <ul id="lessonChecklist" class="lesson-list"></ul>
+            <button id="saveProgressBtn" type="button" class="btn">Save Visit Progress</button>
+          </section>
+
+          <section class="classroom-section">
+            <h4>Prescription Notes</h4>
+            <p id="assignmentTitle" class="course-meta"></p>
+            <textarea id="assignmentText" placeholder="Submit prescription summary or treatment notes..."></textarea>
+            <div class="course-actions">
+              <button id="submitAssignmentBtn" type="button" class="btn">Save Notes</button>
+              <span id="assignmentStatus" class="course-meta"></span>
+            </div>
+          </section>
+
+          <section class="classroom-section">
+            <h4>Triage Assessment</h4>
+            <p id="quizQuestion" class="course-meta"></p>
+            <div id="quizOptions" class="quiz-options"></div>
+            <div class="course-actions">
+              <button id="submitQuizBtn" type="button" class="btn">Submit Assessment</button>
+              <span id="quizResult" class="course-meta"></span>
+            </div>
+          </section>
+
+          <section class="classroom-section">
+            <h4>Lab Report Request</h4>
+            <p id="certificateStatus" class="course-meta"></p>
+            <div class="course-actions">
+              <button id="requestCertificateBtn" type="button" class="btn">Request Lab Report</button>
+            </div>
+          </section>
+
+          <section class="classroom-section">
+            <h4>Care Notes</h4>
+            <ul id="discussionList" class="lms-list"></ul>
+            <textarea id="discussionInput" placeholder="Ask a question or share your care update..."></textarea>
+            <div class="course-actions">
+              <button id="postDiscussionBtn" type="button" class="btn">Post Note</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="viewUpcomingSessions" class="lms-panel lms-view-section" data-view-group="viewUpcomingSessions">
+        <header class="lms-panel-header">
+          <h2>Appointment Calendar</h2>
+        </header>
+        <ul id="upcomingSessions" class="lms-list"></ul>
+      </section>
+
+      <section id="viewLearningActivity" class="lms-panel lms-view-section" data-view-group="viewLearningActivity">
+        <header class="lms-panel-header">
+          <h2>Health Activity Feed</h2>
+        </header>
+        <ul id="activityFeed" class="lms-list"></ul>
+      </section>
+
+      <section id="viewCourseRecords" class="lms-panel lms-view-section" data-view-group="viewCourseRecords">
+        <header class="lms-panel-header">
+          <h2>Clinical Records</h2>
+        </header>
+        <section id="project-list" class="lms-record-list"></section>
+      </section>
+
+      <section id="instructorPanel" class="lms-panel lms-view-section" data-view-group="viewCourseRecords">
+        <header class="lms-panel-header">
+          <h2>Clinical Review Panel</h2>
+          <span class="badge secondary">Admin</span>
+        </header>
+        <div class="instructor-grid">
+          <article class="classroom-section">
+            <h4>Appointment Reviews</h4>
+            <ul id="instructorEnrollmentList" class="lms-list"></ul>
+          </article>
+          <article class="classroom-section">
+            <h4>Doctor Notes & Status</h4>
+            <label>Select Appointment</label>
+            <select id="gradingEnrollmentSelect">
+              <option value="">Choose appointment</option>
+            </select>
+            <label>Clinical Score (0 to 100)</label>
+            <input id="gradingScoreInput" type="number" min="0" max="100" value="85" />
+            <label>Doctor Feedback</label>
+            <textarea id="gradingFeedbackInput" placeholder="Provide improvement feedback..."></textarea>
+            <div class="course-actions">
+              <button id="saveGradeBtn" type="button" class="btn">Save Review</button>
+              <button id="issueCertificateBtn" type="button" class="btn secondary">Publish Report</button>
+            </div>
+          </article>
+          <article class="classroom-section">
+            <h4>Lab Report Requests</h4>
+            <ul id="certificateRequestList" class="lms-list"></ul>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

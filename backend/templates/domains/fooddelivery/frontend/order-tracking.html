@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Tracking | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 0; max-width:760px;">
+    <section class="panel">
+      <h1 style="margin-top:0;">Order Tracking</h1>
+      <p class="meta" id="trackingMeta">Loading current order...</p>
+      <p class="meta" id="trackingAddress"></p>
+      <p class="meta" id="trackingPayment"></p>
+      <p class="meta" id="trackingNote"></p>
+      <div id="trackingControls" class="action-row" style="margin-bottom:10px;">
+        <button class="btn ghost" type="button" data-status-step="0">Confirmed</button>
+        <button class="btn ghost" type="button" data-status-step="1">Preparing</button>
+        <button class="btn ghost" type="button" data-status-step="2">Picked Up</button>
+        <button class="btn ghost" type="button" data-status-step="3">On The Way</button>
+        <button class="btn primary" type="button" data-status-step="4">Delivered</button>
+      </div>
+      <ul class="timeline" id="trackingTimeline"></ul>
+      <div style="margin-top:12px;">
+        <img src="https://loremflickr.com/1200/700/map,delivery?lock=601" alt="Delivery map placeholder" loading="lazy" style="border-radius:12px; border:1px solid #f0f0f0;" />
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

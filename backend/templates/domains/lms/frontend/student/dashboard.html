@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="dashboard">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>LMS Student</h2><p>Learning workspace</p></div>
+      <nav class="role-nav">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="my-courses.html">My Courses</a>
+        <a href="course-player.html">Course Player</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+      <a class="btn secondary" href="../public/course-catalog.html">Go to Courses</a>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Student Portal</p><h1>Dashboard</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><a class="btn secondary" href="profile.html">Profile</a><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="cards">
+        <article class="card"><p>Total Enrolled Courses</p><h3 id="metricEnrolled">0</h3></article>
+        <article class="card"><p>Active Courses</p><h3 id="metricActive">0</h3></article>
+        <article class="card"><p>Completed Courses</p><h3 id="metricCompleted">0</h3></article>
+        <article class="card"><p>Certificates Earned</p><h3 id="metricCertificates">0</h3></article>
+        <article class="card"><p>Learning Hours</p><h3 id="metricHours">0</h3></article>
+      </section>
+      <section class="page-grid">
+        <article class="panel"><h2>My Learning</h2><ul id="learningList" class="list"></ul></article>
+        <article class="panel"><h2>Recommended Courses</h2><ul id="recommendedList" class="list"></ul></article>
+      </section>
+      <section class="page-grid">
+        <article class="panel"><h2>Upcoming Sessions</h2><ul id="upcomingList" class="list"></ul></article>
+        <article class="panel"><h2>Learning Activity</h2><ul id="activityList" class="list"></ul></article>
+      </section>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/course.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>

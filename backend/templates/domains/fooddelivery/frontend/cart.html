@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 0; max-width:900px;">
+    <section class="panel">
+      <h1 style="margin-top:0;">Your Cart</h1>
+      <img src="https://loremflickr.com/1400/700/cart,food?lock=401" alt="Food items in cart" loading="lazy" style="border-radius:12px; border:1px solid #f0f0f0; margin-bottom:12px;" />
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cartItemsBody"></tbody>
+      </table>
+
+      <div class="panel" style="margin-top:12px;">
+        <p class="meta">Items Total: <strong id="cartItemsTotal">Rs 0</strong></p>
+        <p class="meta">Delivery Fee: <strong id="cartDeliveryFee">Rs 0</strong></p>
+        <h3>Total: <span id="cartGrandTotal">Rs 0</span></h3>
+      </div>
+
+      <label for="cartNotes" style="display:block; margin-top:12px;">Cooking Instructions</label>
+      <textarea id="cartNotes" rows="3" placeholder="Less spicy, please."></textarea>
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn ghost" href="restaurant-menu.html">Add More Items</a>
+        <a class="btn primary" href="checkout.html" id="goCheckoutBtn">Proceed to Checkout</a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

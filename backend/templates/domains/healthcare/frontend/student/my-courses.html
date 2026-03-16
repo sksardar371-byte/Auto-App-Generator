@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Appointments</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="my-courses">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>HMS Patient</h2><p>Patient workspace</p></div>
+      <nav class="role-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="doctors.html">Book Appointment</a>
+        <a class="active" href="my-courses.html">My Appointments</a>
+        <a href="course-player.html">Consultation Room</a>
+        <a href="certificates.html">Medical Records</a>
+        <a href="quiz.html">Health Survey</a>
+      </nav>
+      <a class="btn secondary" href="doctors.html">Find Doctors</a>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Patient Portal</p><h1>My Appointments</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><a class="btn secondary" href="profile.html">Profile</a><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="panel">
+        <h2>Booked Appointments</h2>
+        <p class="muted">Open each booked appointment directly in Consultation Room.</p>
+        <div id="myCoursesList" class="page-grid"></div>
+      </section>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>
+

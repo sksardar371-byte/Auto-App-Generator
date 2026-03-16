@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="profile">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>LMS Student</h2><p>Learning workspace</p></div>
+      <nav class="role-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="my-courses.html">My Courses</a>
+        <a href="course-player.html">Course Player</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+      <a class="btn secondary" href="../public/course-catalog.html">Go to Courses</a>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Student Portal</p><h1>Profile</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><a class="btn secondary is-current" href="profile.html">Profile</a><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="panel">
+        <h2>Account Details</h2>
+        <div class="kv"><strong>Name</strong><span id="profileName">-</span></div>
+        <div class="kv"><strong>Email</strong><span id="profileEmail">-</span></div>
+        <div class="kv"><strong>Role</strong><span id="profileRole">-</span></div>
+      </section>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>

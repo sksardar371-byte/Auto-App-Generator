@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | MediFlow HMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-layout">
+      <aside class="auth-visual">
+        <p class="eyebrow">Secure Hospital Access</p>
+        <h1>Welcome Back to MediFlow HMS</h1>
+        <p>Continue hospital operations through role-based dashboards and secure healthcare records.</p>
+        <ul class="auth-points">
+          <li>Admin, doctor, receptionist, patient, pharmacy, and lab roles</li>
+          <li>Protected role-based route access</li>
+          <li>Live appointment and care workflow visibility</li>
+        </ul>
+        <a class="link-inline" href="index.html">Back to Home</a>
+      </aside>
+
+      <section class="auth-card">
+        <h2>Sign In</h2>
+        <p class="auth-subtitle">Use your registered account to continue.</p>
+        <form id="loginForm" class="auth-form">
+          <label>Email Address</label>
+          <input name="email" type="email" placeholder="name@example.com" required />
+          <label>Password</label>
+          <input name="password" type="password" placeholder="Enter password" required />
+          <div class="auth-row">
+            <label class="checkbox">
+              <input type="checkbox" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="muted-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <p class="auth-foot">No account? <a href="register.html">Create one</a></p>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

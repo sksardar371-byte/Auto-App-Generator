@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | LMS Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-layout">
+      <aside class="auth-visual">
+        <p class="eyebrow">Onboarding</p>
+        <h1>Create Your LMS Workspace</h1>
+        <p>Register once and get redirected to the right module according to your role.</p>
+        <ul class="auth-points">
+          <li>Students: learning, quizzes, certificates</li>
+          <li>Instructors: courses, learners, earnings</li>
+          <li>Admins: users, approvals, analytics</li>
+        </ul>
+        <a class="link-inline" href="index.html">Back to Home</a>
+      </aside>
+
+      <section class="auth-card">
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Fill all required fields to activate access.</p>
+        <form id="registerForm" class="auth-form">
+          <label>Full Name</label>
+          <input name="name" placeholder="Your full name" required />
+          <label>Email Address</label>
+          <input name="email" type="email" placeholder="name@example.com" required />
+          <label>Phone</label>
+          <input name="phone" type="tel" placeholder="+91 9XXXXXXXXX" />
+          <label>Password</label>
+          <input name="password" type="password" placeholder="Create password" required />
+          <label>Confirm Password</label>
+          <input name="confirmPassword" type="password" placeholder="Repeat password" required />
+          <label>Role</label>
+          <select name="role" required>
+            <option value="student">student</option>
+            <option value="instructor">instructor</option>
+            <option value="admin">admin</option>
+          </select>
+          <label class="checkbox">
+            <input name="termsAccepted" type="checkbox" required />
+            <span>I agree to platform terms and privacy policy.</span>
+          </label>
+          <button type="submit" class="btn">Create Account</button>
+        </form>
+        <p class="auth-foot">Already have an account? <a href="login.html">Sign in</a></p>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

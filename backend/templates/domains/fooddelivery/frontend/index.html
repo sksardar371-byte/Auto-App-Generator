@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodRush | Zomato-Style Food Delivery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+      <span class="chip">Hyderabad</span>
+      <form class="search">
+        <input type="search" placeholder="Search for restaurant, cuisine or dish" />
+        <button class="btn primary" type="button">Search</button>
+      </form>
+      <a class="btn ghost" href="login.html">Login</a>
+      <a class="btn primary" href="register.html">Register</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <article>
+          <span class="hero-kicker">Introduction</span>
+          <h1>Discover Great Food Near You</h1>
+          <p>FoodRush is a complete food-delivery platform where customers discover restaurants, order dishes, and track every order stage in real time.</p>
+          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="restaurants.html">Explore Restaurants</a>
+            <a class="btn ghost" href="order-tracking.html">Track Order</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><span>Live Restaurants</span><strong>320+</strong></div>
+            <div class="hero-stat"><span>Average Delivery</span><strong>29 min</strong></div>
+            <div class="hero-stat"><span>Daily Orders</span><strong>1.4k</strong></div>
+          </div>
+        </article>
+        <img src="https://loremflickr.com/1200/800/food,platter?lock=101" alt="Assorted food platter for restaurant discovery" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>How FoodRush Works</h2>
+        <p>Introduction to the full ordering flow</p>
+      </div>
+      <div class="intro-grid">
+        <article class="intro-card">
+          <strong>1. Discover</strong>
+          <p class="meta">Search by cuisine, dish, or restaurant and compare ratings and offers.</p>
+        </article>
+        <article class="intro-card">
+          <strong>2. Add to Cart</strong>
+          <p class="meta">Open menu, choose items, adjust quantity, and add cooking instructions.</p>
+        </article>
+        <article class="intro-card">
+          <strong>3. Checkout</strong>
+          <p class="meta">Select address and payment method with instant total calculation.</p>
+        </article>
+        <article class="intro-card">
+          <strong>4. Track Live</strong>
+          <p class="meta">Follow order status from confirmation to doorstep delivery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Food Categories</h2>
+        <p>Click a category to filter restaurant results</p>
+      </div>
+      <div class="category-row">
+        <span class="category">Pizza</span>
+        <span class="category">Burgers</span>
+        <span class="category">Biryani</span>
+        <span class="category">Chinese</span>
+        <span class="category">Desserts</span>
+        <span class="category">Healthy</span>
+        <span class="category">South Indian</span>
+        <span class="category">North Indian</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="promo-strip">
+        <article class="promo-item">
+          <strong>Flat 50% OFF</strong>
+          <span class="meta">First 3 orders above Rs 299</span>
+        </article>
+        <article class="promo-item">
+          <strong>Free Delivery</strong>
+          <span class="meta">Selected partner restaurants</span>
+        </article>
+        <article class="promo-item">
+          <strong>Night Specials</strong>
+          <span class="meta">Save up to Rs 120 after 11 PM</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Collections</h2>
+        <p>Curated picks by meal type</p>
+      </div>
+      <div class="collection-grid">
+        <article class="collection-card">
+          <img src="https://loremflickr.com/900/700/pizza?lock=111" alt="Best pizza collection" loading="lazy" />
+          <div class="collection-overlay">
+            <strong>Best Pizza Places</strong>
+            <span>42 places</span>
+          </div>
+        </article>
+        <article class="collection-card">
+          <img src="https://loremflickr.com/900/700/biryani?lock=112" alt="Top biryani collection" loading="lazy" />
+          <div class="collection-overlay">
+            <strong>Top Biryani Spots</strong>
+            <span>27 places</span>
+          </div>
+        </article>
+        <article class="collection-card">
+          <img src="https://loremflickr.com/900/700/dessert,cake?lock=113" alt="Dessert collection" loading="lazy" />
+          <div class="collection-overlay">
+            <strong>Dessert Specials</strong>
+            <span>19 places</span>
+          </div>
+        </article>
+        <article class="collection-card">
+          <img src="https://loremflickr.com/900/700/salad,healthy?lock=114" alt="Healthy meals collection" loading="lazy" />
+          <div class="collection-overlay">
+            <strong>Healthy Meals</strong>
+            <span>31 places</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Top Restaurants Near You</h2>
+        <p>Ranked by rating, quality, and delivery speed</p>
+      </div>
+      <div class="grid cards-3">
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/burger,restaurant?lock=121" alt="Burger Hub restaurant serving burgers" loading="lazy" />
+          <div class="card-body">
+            <h3>Burger Hub</h3>
+            <p class="meta">4.4 star | 30 mins | Rs 220 for two</p>
+            <p class="meta">Burger | Fast Food | American</p>
+            <span class="offer">25% OFF</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/biryani,restaurant?lock=122" alt="Biryani House restaurant serving biryani" loading="lazy" />
+          <div class="card-body">
+            <h3>Biryani House</h3>
+            <p class="meta">4.6 star | 27 mins | Rs 280 for two</p>
+            <p class="meta">Biryani | Mughlai | Indian</p>
+            <span class="offer">Free Delivery</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/pizza,restaurant?lock=123" alt="Pizza Craft restaurant serving pizza" loading="lazy" />
+          <div class="card-body">
+            <h3>Pizza Craft</h3>
+            <p class="meta">4.5 star | 32 mins | Rs 250 for two</p>
+            <p class="meta">Pizza | Italian | Continental</p>
+            <span class="offer">20% OFF</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/noodles,chinese?lock=124" alt="Wok House restaurant serving chinese noodles" loading="lazy" />
+          <div class="card-body">
+            <h3>Wok House</h3>
+            <p class="meta">4.3 star | 29 mins | Rs 240 for two</p>
+            <p class="meta">Chinese | Noodles | Asian</p>
+            <span class="offer">Buy 1 Get 1</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/cake,dessert,cafe?lock=125" alt="Sugar Spoon dessert cafe with cakes" loading="lazy" />
+          <div class="card-body">
+            <h3>Sugar Spoon</h3>
+            <p class="meta">4.6 star | 26 mins | Rs 200 for two</p>
+            <p class="meta">Desserts | Cakes | Beverages</p>
+            <span class="offer">15% OFF</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://loremflickr.com/900/700/salad,bowl?lock=126" alt="Green Bowl restaurant serving healthy salads" loading="lazy" />
+          <div class="card-body">
+            <h3>Green Bowl</h3>
+            <p class="meta">4.5 star | 22 mins | Rs 230 for two</p>
+            <p class="meta">Healthy | Salad | Bowls</p>
+            <span class="offer">Healthy Combo</span>
+            <div style="margin-top:10px;"><a class="btn primary" href="restaurant-menu.html">View Menu</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Popular Dishes</h2>
+        <p>Image keywords are mapped directly to each dish label</p>
+      </div>
+      <div class="grid cards-3">
+        <article class="card menu-card">
+          <img src="https://loremflickr.com/900/700/chicken,burger?lock=131" alt="Chicken Burger dish" loading="lazy" />
+          <div class="card-body">
+            <h3>Chicken Burger</h3>
+            <p class="meta">Rs 150 | From Burger Hub | 4.5 star</p>
+            <button class="btn primary" type="button" data-add-item data-name="Chicken Burger" data-price="150" data-restaurant="Burger Hub" data-image="https://loremflickr.com/900/700/chicken,burger?lock=131">Order Now</button>
+          </div>
+        </article>
+        <article class="card menu-card">
+          <img src="https://loremflickr.com/900/700/chicken,biryani?lock=132" alt="Chicken Biryani dish" loading="lazy" />
+          <div class="card-body">
+            <h3>Chicken Biryani</h3>
+            <p class="meta">Rs 250 | From Biryani House | 4.7 star</p>
+            <button class="btn primary" type="button" data-add-item data-name="Chicken Biryani" data-price="250" data-restaurant="Biryani House" data-image="https://loremflickr.com/900/700/chicken,biryani?lock=132">Order Now</button>
+          </div>
+        </article>
+        <article class="card menu-card">
+          <img src="https://loremflickr.com/900/700/pepperoni,pizza?lock=133" alt="Pepperoni Pizza dish" loading="lazy" />
+          <div class="card-body">
+            <h3>Pepperoni Pizza</h3>
+            <p class="meta">Rs 320 | From Pizza Craft | 4.6 star</p>
+            <button class="btn primary" type="button" data-add-item data-name="Pepperoni Pizza" data-price="320" data-restaurant="Pizza Craft" data-image="https://loremflickr.com/900/700/pepperoni,pizza?lock=133">Order Now</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Live Tracking Preview</h2>
+        <p>Track each order stage until delivery</p>
+      </div>
+      <section class="layout-two">
+        <article class="panel">
+          <ul class="timeline">
+            <li class="active">Order Confirmed</li>
+            <li class="active">Restaurant Preparing</li>
+            <li class="active">Picked Up by Delivery Partner</li>
+            <li>On the Way</li>
+            <li>Delivered</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <a class="btn primary" href="order-tracking.html">Open Tracking Page</a>
+          </div>
+        </article>
+        <article class="panel">
+          <img src="https://loremflickr.com/1200/800/delivery,scooter,food?lock=141" alt="Delivery partner carrying food order" loading="lazy" style="border-radius:12px; border:1px solid #f0f0f0;" />
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <section class="footer-col">
+        <h4>FoodRush</h4>
+        <p>A full food-delivery interface with restaurant discovery, menu flow, cart, checkout, and live tracking.</p>
+      </section>
+      <section class="footer-col">
+        <h4>Explore</h4>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="cart.html">Cart</a>
+        <a href="order-tracking.html">Track Order</a>
+      </section>
+      <section class="footer-col">
+        <h4>Account</h4>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="profile.html">Profile</a>
+      </section>
+      <section class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Support</a>
+        <a href="#">Terms</a>
+      </section>
+    </div>
+    <div class="container footer-note">FoodRush UI template for production-style food delivery apps.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

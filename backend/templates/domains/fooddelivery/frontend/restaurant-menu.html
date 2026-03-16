@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Menu | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 0;">
+    <section class="hero" style="margin-top:0;">
+      <div class="hero-grid">
+        <article>
+          <h1>Hyderabad Kitchen</h1>
+          <p>4.7 star | 24 mins | Rs 300 for two | Biryani | Indian | Mughlai</p>
+          <div class="category-row" style="margin-top:10px;">
+            <span class="category">Recommended</span>
+            <span class="category">Starters</span>
+            <span class="category">Main Course</span>
+            <span class="category">Desserts</span>
+            <span class="category">Drinks</span>
+          </div>
+        </article>
+        <img src="https://loremflickr.com/1200/800/biryani,restaurant?lock=301" alt="Hyderabad Kitchen restaurant serving biryani" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Menu Items</h2>
+        <p>Add dishes to cart with live total updates</p>
+      </div>
+      <div class="menu-grid">
+        <article class="card menu-card">
+          <img src="https://loremflickr.com/900/700/chicken,biryani?lock=311" alt="Chicken Biryani dish" loading="lazy" />
+          <div class="card-body">
+            <h3>Chicken Biryani</h3>
+            <p class="meta">Rs 250 | 4.7 star</p>
+            <p class="meta">Spicy Hyderabadi dum biryani with tender chicken.</p>
+            <button class="btn primary" type="button" data-add-item data-name="Chicken Biryani" data-price="250" data-restaurant="Hyderabad Kitchen" data-image="https://loremflickr.com/900/700/chicken,biryani?lock=311">Add +</button>
+          </div>
+        </article>
+        <article class="card menu-card">
+          <img src="https://loremflickr.com/900/700/paneer,tikka?lock=312" alt="Paneer Tikka dish" loading="lazy" />
+          <div class="card-body">
+            <h3>Paneer Tikka</h3>
+            <p class="meta">Rs 180 | 4.5 star</p>
+            <p class="meta">Char-grilled paneer cubes with smoky marinade.</p>
+            <button class="btn primary" type="button" data-add-item data-name="Paneer Tikka" data-price="180" data-restaurant="Hyderabad Kitchen" data-image="https://loremflickr.com/900/700/paneer,tikka?lock=312">Add +</button>
+          </div>
+        </article>
+        <article class="card menu-card">
+          <img src="https://loremflickr.com/900/700/butter,naan?lock=313" alt="Butter Naan dish" loading="lazy" />
+          <div class="card-body">
+            <h3>Butter Naan</h3>
+            <p class="meta">Rs 45 | 4.4 star</p>
+            <p class="meta">Fresh hot naan brushed with melted butter.</p>
+            <button class="btn primary" type="button" data-add-item data-name="Butter Naan" data-price="45" data-restaurant="Hyderabad Kitchen" data-image="https://loremflickr.com/900/700/butter,naan?lock=313">Add +</button>
+          </div>
+        </article>
+        <article class="card menu-card">
+          <img src="https://loremflickr.com/900/700/gulab,jamun?lock=314" alt="Gulab Jamun dessert" loading="lazy" />
+          <div class="card-body">
+            <h3>Gulab Jamun</h3>
+            <p class="meta">Rs 90 | 4.6 star</p>
+            <p class="meta">Warm syrup-soaked milk dumplings.</p>
+            <button class="btn primary" type="button" data-add-item data-name="Gulab Jamun" data-price="90" data-restaurant="Hyderabad Kitchen" data-image="https://loremflickr.com/900/700/gulab,jamun?lock=314">Add +</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="ownerMenuSection" style="display:none;">
+      <div class="section-head">
+        <h2>Owner Added Specials</h2>
+        <p>Live menu items published by restaurant owner</p>
+      </div>
+      <div class="menu-grid" id="ownerMenuGrid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Frequently Ordered Together</h2>
+        <p>One-click combo for quick checkout</p>
+      </div>
+      <section class="layout-two">
+        <article class="panel">
+          <p class="meta">Chicken Biryani + Gulab Jamun + Coke</p>
+          <h3>Combo Price: Rs 359</h3>
+          <button class="btn primary" type="button" data-add-item data-name="Biryani Combo Meal" data-price="359" data-restaurant="Hyderabad Kitchen" data-image="https://loremflickr.com/900/700/biryani,combo?lock=315">Add Combo</button>
+        </article>
+        <article class="panel">
+          <img src="https://loremflickr.com/1200/800/biryani,combo,meal?lock=315" alt="Biryani combo meal" loading="lazy" style="border-radius:12px; border:1px solid #f0f0f0;" />
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <a class="floating-cart" id="floatingCart" href="cart.html">Cart is empty | View Cart</a>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run start",
+    "electron": "npm --prefix backend run electron",
+    "electron:dev": "npm --prefix backend run electron:dev",
+    "electron:dist": "npm --prefix backend run dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3"
+  }
+}

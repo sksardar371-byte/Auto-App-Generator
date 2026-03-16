@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructor Profile</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body data-page="profile">
+  <main class="role-shell">
+    <aside class="role-sidebar">
+      <div class="role-brand"><h2>LMS Instructor</h2><p>Course operations</p></div>
+      <nav class="role-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-course.html">Create Course</a>
+        <a href="manage-courses.html">Manage Courses</a>
+        <a href="students.html">Students</a>
+        <a href="earnings.html">Earnings</a>
+        <a class="active" href="profile.html">Profile</a>
+      </nav>
+    </aside>
+    <section class="role-main">
+      <header class="role-topbar">
+        <div><p>Instructor Portal</p><h1>Profile</h1></div>
+        <div class="topbar-actions"><span id="roleUserLabel" class="topbar-user"></span><button id="logoutBtn" class="btn secondary">Logout</button></div>
+      </header>
+      <section class="panel">
+        <h2>Instructor Details</h2>
+        <div class="kv"><strong>Name</strong><span id="profileName">-</span></div>
+        <div class="kv"><strong>Email</strong><span id="profileEmail">-</span></div>
+        <div class="kv"><strong>Role</strong><span id="profileRole">-</span></div>
+      </section>
+    </section>
+  </main>
+  <script src="../script.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/instructor.js"></script>
+</body>
+</html>

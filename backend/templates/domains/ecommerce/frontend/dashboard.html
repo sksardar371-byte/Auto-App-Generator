@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin:12px 0; }
+    .stat { border:1px solid #d7e0ed; border-radius:10px; padding:10px; background:#fff; }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <header class="row">
+        <h1>Ecommerce Dashboard</h1>
+        <button id="logoutBtn" class="btn secondary" type="button">Logout</button>
+      </header>
+      <div class="stats">
+        <div class="stat"><strong>Products</strong><div id="metricCount">0</div></div>
+        <div class="stat"><strong>Total Stock</strong><div id="metricStock">0</div></div>
+        <div class="stat"><strong>Revenue Potential</strong><div id="metricValue">0</div></div>
+      </div>
+      <form id="dashboardFeatureForm">
+        <label>Product Name</label><input name="productName" required />
+        <label>Category</label><input name="category" />
+        <label>Price</label><input name="price" type="number" min="0" step="0.01" />
+        <label>Stock</label><input name="stock" type="number" min="0" />
+        <label>Status</label><select name="status"><option value="active">active</option><option value="draft">draft</option></select>
+        <button type="submit">Save Product</button>
+      </form>
+      <section id="project-list"></section>
+      <p><a href="index.html">Back Home</a></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

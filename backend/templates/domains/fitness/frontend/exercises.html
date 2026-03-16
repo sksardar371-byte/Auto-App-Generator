@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercises</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <header class="row">
+        <h1>Exercises</h1>
+        <a class="btn secondary" href="dashboard.html">Dashboard</a>
+      </header>
+      <form id="exerciseForm">
+        <label>Name</label><input name="name" required />
+        <label>Muscle Group</label><input name="muscleGroup" required />
+        <label>Description</label><textarea name="description"></textarea>
+        <label>Difficulty</label>
+        <select name="difficulty">
+          <option value="beginner">beginner</option>
+          <option value="intermediate">intermediate</option>
+          <option value="advanced">advanced</option>
+        </select>
+        <button type="submit">Save Exercise</button>
+      </form>
+      <section id="exercise-list"></section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="exercises.js"></script>
+</body>
+</html>
+

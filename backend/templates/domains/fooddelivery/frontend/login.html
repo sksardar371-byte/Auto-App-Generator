@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | FoodRush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">FoodRush</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:20px 0 28px;">
+    <section class="auth-layout">
+      <article class="auth-showcase">
+        <h2>Welcome Back</h2>
+        <p class="meta">Login to continue ordering from your favorite restaurants and track your deliveries.</p>
+        <img src="https://loremflickr.com/1200/800/food,delivery,app?lock=901" alt="Food delivery login showcase" loading="lazy" />
+        <ul class="auth-points">
+          <li>Quick reorder from order history</li>
+          <li>Live order tracking with status updates</li>
+          <li>Role-based access for customer and operations</li>
+        </ul>
+      </article>
+
+      <article class="auth-form">
+        <h1>Sign In</h1>
+        <p class="meta">Use your FoodRush account credentials.</p>
+        <form id="loginForm" style="display:grid; gap:10px;">
+          <label>Email</label>
+          <input type="email" name="email" required />
+          <label>Password</label>
+          <input type="password" name="password" required />
+          <button class="btn primary" type="submit">Login</button>
+        </form>
+        <p class="meta" style="margin-top:12px;">New to FoodRush? <a href="register.html" style="color:var(--brand);">Create account</a></p>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
