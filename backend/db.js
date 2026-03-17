@@ -1,5 +1,13 @@
 const mysql = require('mysql2');
 
+// Check env vars
+['DB_HOST','DB_PORT','DB_USER','DB_PASSWORD','DB_NAME'].forEach(key => {
+  if (!process.env[key]) {
+    console.error(`❌ Environment variable ${key} is missing!`);
+    process.exit(1); // Stop app if any env is missing
+  }
+});
+
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
@@ -11,16 +19,16 @@ const db = mysql.createConnection({
   keepAliveInitialDelay: 10000,
 });
 
-db.connect((err) => {
+db.connect(err => {
   if (err) {
-    console.log('Database connection failed:', err);
+    console.error('❌ Database connection failed:', err);
   } else {
-    console.log('Connected to MySQL database.');
+    console.log('✅ Connected to MySQL database.');
   }
 });
 
-db.on('error', (err) => {
-  console.log('Database runtime error:', err?.code || err?.message || err);
+db.on('error', err => {
+  console.error('Database runtime error:', err?.code || err?.message || err);
 });
 
 module.exports = db;
