@@ -1,29 +1,19 @@
+// server.js
 const path = require("path");
-require("dotenv").config({ path: path.join(__dirname, ".env"), override: true });
-
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
-const OpenAI = require("openai");
-const mysql = require("mysql2");
 
+// ✅ Import DB connection
+const db = require("./db");
+
+// ---------------------------
+// ✅ Express app
+// ---------------------------
 const app = express();
 
 // ---------------------------
-// ✅ MySQL Connection (Railway)
-// ---------------------------
-const db = mysql.createConnection(process.env.MYSQL_PUBLIC_URL);
-
-db.connect((err) => {
-  if (err) {
-    console.error("❌ DB Connection Failed:", err);
-  } else {
-    console.log("✅ DB Connected Successfully");
-  }
-});
-
-// ---------------------------
-// ✅ CORS (Allow all for deployment)
+// ✅ CORS
 // ---------------------------
 app.use(cors());
 
@@ -97,7 +87,7 @@ app.get("/api/health", (_req, res) => {
 // ---------------------------
 // ✅ Root API
 // ---------------------------
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.send("🚀 Auto App Generator Backend is running...");
 });
 
