@@ -1,11 +1,7 @@
-// server.js
 const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
-
-// ✅ Import DB connection
-const db = require("./db");
 
 // ---------------------------
 // ✅ Express app
